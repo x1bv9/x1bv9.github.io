@@ -1,0 +1,108 @@
+/* ==========================================
+   デザイン変数 & リセット
+   ========================================== */
+:root {
+  --bg-color: #0f172a;          /* 背景色（ダークネイビー） */
+  --card-bg: #1e293b;           /* カード背景色 */
+  --border-color: #334155;      /* ボーダー色 */
+  --text-main: #f8fafc;         /* メインテキスト */
+  --text-sub: #94a3b8;          /* サブテキスト */
+  --accent-color: #38bdf8;      /* アクセントカラー（ライトブルー） */
+  --accent-hover: #0284c7;      /* ホバー時のカラー */
+  --accent-glow: rgba(56, 189, 248, 0.25);
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+/* ==========================================
+   メインコンテナ (カードデザイン)
+   ========================================== */
+main {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+/* ==========================================
+   タイポグラフィ & 区切り
+   ========================================== */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* サイト説明テキスト */
+main > p:nth-of-type(1) {
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+}
+
+/* AimRoom説明テキスト */
+main > p:nth-of-type(2) {
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+}
+
+/* ==========================================
+   ボタン風リンクスタイル
+   ========================================== */
+a {
+  display: inline-block;
+  padding: 0.8rem 1.75rem;
+  background-color: var(--accent-color);
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+a:hover {
+  background-color: var(--accent-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+a:active {
+  transform: translateY(0);
+}
