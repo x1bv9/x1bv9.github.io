@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://x1bv9.github.io/sitemap.xml
